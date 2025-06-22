@@ -78,23 +78,52 @@ button:hover {
     from {opacity: 0; transform: translateY(10px);}
     to {opacity: 1; transform: translateY(0);}
 }
+
+
 .flex-wrap {
     display: flex;
     gap: 40px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
 .char-skin {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .skin-large {
     max-width: 300px;
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .flex-wrap {
+        flex-direction: column;
+    }
+    .skin-large {
+        max-width: 100%;
+    }
+    .official-table th, .official-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    textarea {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
 }
