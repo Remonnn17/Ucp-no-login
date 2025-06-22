@@ -2,8 +2,6 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url('https://i.imgur.com/qg9uGhf.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: #fff;
 }
 .overlay {
