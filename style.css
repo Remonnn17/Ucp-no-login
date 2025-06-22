@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: url('https://wallpapercat.com/path/to/your-selected-image') no-repeat center center fixed;
+    background: url('https://i.imgur.com/qg9uGhf.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
 }
@@ -125,5 +125,32 @@ button:hover {
     }
     button {
         font-size: 14px;
+    }
+}
+
+
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .sidebar {
+        transition: transform 0.3s ease-in-out;
+    }
+    .sidebar.sidebar-hidden {
+        transform: translateX(-100%);
     }
 }
