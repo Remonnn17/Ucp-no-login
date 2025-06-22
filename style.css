@@ -231,6 +231,16 @@ body::before {
     left: 0 !important;
 }
 
+.sidebar {
+    position: fixed;
+    left: -200px; /* tersembunyi awalnya */
+    transition: 0.3s;
+}
+
+.sidebar.sidebar-visible {
+    left: 0 !important; /* geser masuk */
+}
+
 .menu-toggle {
     position: fixed;
     top: 15px;
