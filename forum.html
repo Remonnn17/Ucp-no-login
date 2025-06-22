@@ -3,20 +3,24 @@
 <html>
 <head><meta charset="UTF-8"><title>Forum Info</title><link rel="stylesheet" href="style.css"></head>
 <body>
+
+<div class="sidebar">
+    <h2 style="color: cyan; margin-left: 10px;">UCP</h2>
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="karakter.html">👤 Karakter</a>
+    <a href="forum.html">💬 Forum Info</a>
+    <a href="official.html">📢 Official</a>
+    <a href="log.html">🧾 Log Login</a>
+</div>
+
+<div class="main-content"><div class="menu-toggle" onclick="toggleSidebar()">☰</div>
 <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
 
 
 
     <div class="overlay"></div>
     
-<div class="sidebar">
-    <h2>UCP</h2>
-    <a href="index.html">🏠 Dashboard</a>
-    <a href="characters.html">👤 Karakter</a>
-    <a href="forum.html">💬 Forum Info</a>
-    <a href="official.html">📢 Official</a>
-    <a href="logs.html">📜 Log Login</a>
-</div>
+
 <div class="main-content">
 <div class="main-content">
 
@@ -42,5 +46,13 @@ function toggleSidebar() {
 </script>
 
 
-</div></div></body>
+</div></div></div>
+<script>
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('sidebar-visible');
+}
+</script>
+
+</body>
 </html>
