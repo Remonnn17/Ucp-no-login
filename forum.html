@@ -38,6 +38,11 @@ function toggleSidebar() {
     const stored = JSON.parse(localStorage.getItem("dashboardMessages") || "[]");
     stored.unshift({ time, msg });
     localStorage.setItem("dashboardMessages", JSON.stringify(stored));
+
+function toggleSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('sidebar-visible');
+}
 </script>
 
 
