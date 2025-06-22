@@ -166,3 +166,30 @@ body::before {
     background-color: rgba(78, 52, 46, 0.7); /* Coklat dengan transparansi */
     z-index: -1;
 }
+
+
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 28px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .sidebar {
+        transition: transform 0.3s ease-in-out;
+    }
+    .sidebar.sidebar-hidden {
+        transform: translateX(-100%);
+    }
+}
