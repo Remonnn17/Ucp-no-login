@@ -2,7 +2,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #4e342e;
+    background: url('https://i.imgur.com/qg9uGhf.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
 }
 .overlay {
@@ -152,4 +153,16 @@ button:hover {
     .sidebar.sidebar-hidden {
         transform: translateX(-100%);
     }
+}
+
+
+/* Overlay coklat untuk background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 52, 46, 0.7); /* Coklat dengan transparansi */
+    z-index: -1;
 }
