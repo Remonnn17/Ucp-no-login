@@ -18,6 +18,7 @@
     <a href="logs.html">📜 Log Login</a>
 </div>
 <div class="main-content">
+<div class="main-content">
 
     <div class="main fade">
         <h1>Forum Informasi</h1>
@@ -38,13 +39,8 @@ function toggleSidebar() {
     const stored = JSON.parse(localStorage.getItem("dashboardMessages") || "[]");
     stored.unshift({ time, msg });
     localStorage.setItem("dashboardMessages", JSON.stringify(stored));
-
-function toggleSidebar() {
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('sidebar-visible');
-}
 </script>
 
 
-</div></body>
+</div></div></body>
 </html>

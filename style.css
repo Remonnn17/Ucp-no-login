@@ -1,219 +1,5 @@
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    
-    background-size: cover;
-    color: #fff;
-}
-.overlay {
-    background-color: rgba(0, 0, 0, 0.75);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    z-index: -1;
-}
-.sidebar {
-    width: 220px;
-    background-color: rgba(0,0,0,0.85);
-    height: 100vh;
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.sidebar h2 {
-    color: #1abc9c;
-}
-.sidebar a {
-    display: block;
-    color: #fff;
-    margin: 10px 0;
-    text-decoration: none;
-    font-weight: bold;
-}
-.sidebar a:hover {
-    color: #1abc9c;
-}
-.main {
-    margin-left: 240px;
-    padding: 30px;
-}
-.card, .form-card {
-    background-color: rgba(0,0,0,0.6);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.skin-preview {
-    width: 100%;
-    max-width: 200px;
-    display: block;
-    margin-bottom: 10px;
-}
-textarea {
-    background: #2c3e50;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-}
-button {
-    background-color: #1abc9c;
-    color: white;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #16a085;
-}
-.fade {
-    animation: fadeIn 0.6s ease-in-out;
-}
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-
-.flex-wrap {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-.char-skin {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.skin-large {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
-}
-
-
-
-    .main {
-        margin-left: 0;
-        padding: 20px;
-    }
-    .flex-wrap {
-        flex-direction: column;
-    }
-    .skin-large {
-        max-width: 100%;
-    }
-    .official-table th, .official-table td {
-        font-size: 14px;
-        padding: 8px;
-    }
-    textarea {
-        font-size: 14px;
-    }
-    button {
-        font-size: 14px;
-    }
-}
-
-
-
-
-
-    
-}
-
-
-/* Overlay coklat untuk background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(78, 52, 46, 0.7); /* Coklat dengan transparansi */
-    z-index: -1;
-}
-
-
-
-
-
-    
-}
-
-
-/* Responsive layout fix for mobile */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .card {
-        margin: 10px 0;
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    table {
-        font-size: 13px;
-        width: 100%;
-    }
-
-    input[type="text"], textarea, input[type="number"] {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-        transform: none !important;
-    }
-
-    .sidebar a {
-        font-size: 15px;
-        padding: 10px;
-    }
-}
-
-
-/* Layout fix */
-.main-content {
-    margin-left: 200px;
-    padding: 15px;
-    min-height: 100vh;
-    color: white;
-}
-
-/* Responsive layout fix */
-@media screen and (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-    }
-}
-
-
-/* Slide Sidebar CSS */
+/* Sidebar Slide Layout */
 .sidebar {
     position: fixed;
     top: 0;
@@ -222,23 +8,13 @@ body::before {
     height: 100%;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 20px;
+    transition: left 0.3s ease;
     z-index: 1000;
-}
-
-.sidebar-visible {
-    left: 0 !important;
-}
-
-.sidebar {
-    position: fixed;
-    left: -200px; /* tersembunyi awalnya */
-    transition: 0.3s;
+    padding-top: 20px;
 }
 
 .sidebar.sidebar-visible {
-    left: 0 !important; /* geser masuk */
+    left: 0;
 }
 
 .menu-toggle {
@@ -247,13 +23,22 @@ body::before {
     left: 15px;
     font-size: 28px;
     color: white;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 5px;
     z-index: 1100;
     cursor: pointer;
 }
 
+/* Konten utama */
+.main-content {
+    padding: 15px;
+    min-height: 100vh;
+    color: white;
+    transition: margin-left 0.3s ease;
+}
+
+/* Responsive */
 @media screen and (min-width: 769px) {
     .sidebar {
         left: 0;
