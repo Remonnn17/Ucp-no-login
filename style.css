@@ -2,6 +2,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    
+    background-size: cover;
     color: #fff;
 }
 .overlay {
@@ -98,12 +100,7 @@ button:hover {
 }
 
 
-@media screen and (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+
     .main {
         margin-left: 0;
         padding: 20px;
@@ -127,30 +124,10 @@ button:hover {
 }
 
 
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 28px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 999;
-    display: none;
-}
 
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    .sidebar {
-        transition: transform 0.3s ease-in-out;
-    }
-    .sidebar.sidebar-hidden {
-        transform: translateX(-100%);
-    }
+
+
+    
 }
 
 
@@ -166,28 +143,49 @@ body::before {
 }
 
 
-.menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 28px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 999;
-    display: none;
+
+
+
+    
 }
 
+
+/* Responsive layout fix for mobile */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    body {
+        padding: 10px;
+        font-size: 15px;
     }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .card {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    input[type="text"], textarea, input[type="number"] {
+        width: 100%;
+        font-size: 14px;
+    }
+
     .sidebar {
-        transition: transform 0.3s ease-in-out;
+        width: 100%;
+        position: relative;
+        transform: none !important;
     }
-    .sidebar.sidebar-hidden {
-        transform: translateX(-100%);
+
+    .sidebar a {
+        font-size: 15px;
+        padding: 10px;
     }
 }
